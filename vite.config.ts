@@ -18,15 +18,7 @@ const config = defineConfig({
 
     tailwindcss(),
 
-    tanstackStart({
-      prerender: {
-        enabled: true,
-        filter: ({ path: routePath }) => {
-          return routePath === "/";
-        },
-      },
-      sitemap: { host: "http://localhost:4173" },
-    }),
+    tanstackStart(),
 
     viteReact({
       babel: {
