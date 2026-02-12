@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@import "tw-animate-css";
+
+@import "./shadcn.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --background: #ececec;
+    --foreground: #1a1a1a;
+  }
+  :root.dark {
+    --background: #1a1a1a;
+    --foreground: #ececec;
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-50: var(--color-indigo-50);
+  --color-brand-100: var(--color-indigo-100);
+  --color-brand-200: var(--color-indigo-200);
+  --color-brand-300: var(--color-indigo-300);
+  --color-brand-400: var(--color-indigo-400);
+  --color-brand-500: var(--color-indigo-500);
+  --color-brand-600: var(--color-indigo-600);
+  --color-brand-700: var(--color-indigo-700);
+  --color-brand-800: var(--color-indigo-800);
+  --color-brand-900: var(--color-indigo-900);
+  --color-brand-950: var(--color-indigo-950);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground min-h-svh;
+  }
+
+  main {
+    @apply grow;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
