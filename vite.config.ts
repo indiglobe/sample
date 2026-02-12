@@ -37,6 +37,10 @@ const config = defineConfig({
     environment: "jsdom",
     setupFiles: "./src/lib/vitest/setup.ts",
   },
+
+  ssr: {
+    noExternal: ["zod"],
+  },
 });
 
 export default config;
